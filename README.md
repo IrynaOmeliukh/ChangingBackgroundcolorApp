@@ -34,9 +34,9 @@ Project is created with:
 
 
 Here are some helpful links 
-* https://developer.android.com/studio/install
-* https://docs.flutter.dev/get-started/install
-* https://muchirijane00.wordpress.com/2019/09/08/how-to-clone-a-flutter-project-from-github-to-android-studio/
+* [Install Anroid Studio](https://developer.android.com/studio/install)
+* [Install Flutter](https://docs.flutter.dev/get-started/install)
+* [Clone a Flutter project from GitHub to Android Studio](https://muchirijane00.wordpress.com/2019/09/08/how-to-clone-a-flutter-project-from-github-to-android-studio/)
 
 
 
