@@ -61,7 +61,7 @@ class _BackgroundcolorApplicationState
   }
 }
 
-void main(List<String> args) {
+void main() {
   runApp(const MaterialApp(
     home: Scaffold(
       body: BackgroundcolorApplication(),
