@@ -2,27 +2,25 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class BackgroundcolorApplication extends StatefulWidget {
-  const BackgroundcolorApplication({ Key? key }) : super(key: key);
+  const BackgroundcolorApplication({Key? key}) : super(key: key);
 
   @override
-  _BackgroundcolorApplicationState createState() => _BackgroundcolorApplicationState();
+  _BackgroundcolorApplicationState createState() =>
+      _BackgroundcolorApplicationState();
 }
-
 
 Color backgroundColor = Colors.lightBlueAccent;
 
-class _BackgroundcolorApplicationState extends State<BackgroundcolorApplication> {
-
+class _BackgroundcolorApplicationState
+    extends State<BackgroundcolorApplication> {
   final Random random = Random();
 
- void changeBackgroundColor(){
+  void changeBackgroundColor() {
     setState(() {
-        backgroundColor = Color.fromARGB(random.nextInt(256),
-                        random.nextInt(256), 
-                        random.nextInt(256),
-                        random.nextInt(256));
-        });
- }
+      backgroundColor = Color.fromARGB(random.nextInt(256), random.nextInt(256),
+          random.nextInt(256), random.nextInt(256));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,32 +33,38 @@ class _BackgroundcolorApplicationState extends State<BackgroundcolorApplication>
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Icon(Icons.android_outlined, color: Colors.black, size: 50,),
-                ),
-                Text('Hey there!', style: TextStyle(fontSize: 30,),)]
-              ),
-            ), 
-         ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Padding(
+                      padding: EdgeInsets.all(15.0),
+                      child: Icon(
+                        Icons.android_outlined,
+                        color: Colors.black,
+                        size: 50,
+                      ),
+                    ),
+                    Text(
+                      'Hey there!',
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    )
+                  ]),
+            ),
+          ],
         ),
-      onTap: ()
-      {
-        changeBackgroundColor();
-      },
+        onTap: () {
+          changeBackgroundColor();
+        },
       ),
     );
   }
 }
 
 void main(List<String> args) {
-  runApp(
-    const MaterialApp(
-      home: Scaffold(
-        body: BackgroundcolorApplication(),
-        ),
-    )
-  );
+  runApp(const MaterialApp(
+    home: Scaffold(
+      body: BackgroundcolorApplication(),
+    ),
+  ));
 }
